@@ -23,23 +23,7 @@
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $(".portrait").on("webkitAnimationEnd oanimationend msAnimationEnd animationend",
-                function () {
-                    $(this).removeClass("bow").removeClass("hurt").removeClass("slash").addClass("stand");
-                }
-        );
-    });
-    function slash(player) {
-        $(player).removeClass("stand").addClass("slash");
-    }
-    function bow(player) {
-        $(player).removeClass("stand").addClass("bow");
-    }
-    function hurt(player) {
-        $(player).removeClass("stand").addClass("hurt");
-    }
-</script>
+<script src="js/graphics.js"></script>
+<script src="js/game.js"></script>
 </body>
 </html>
