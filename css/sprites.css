@@ -2,6 +2,7 @@ body {
     background: #24aecd;
 }
 
+
 .portrait {
     height: 64px;
     width: 64px;
@@ -9,7 +10,8 @@ body {
 }
 
 .skeleton.slash {
-    background: url('../graphics/lpc/png/slash/BODY_skeleton.png') left center,
+    background: url('../graphics/lpc/png/walkcycle/WEAPON_shield_cutout_body.png') left center,
+    url('../graphics/lpc/png/slash/BODY_skeleton.png') left center,
     url('../graphics/lpc/png/slash/WEAPON_dagger.png') left center;
 }
 
@@ -61,7 +63,8 @@ body {
 }
 
 .skeleton.stand {
-    background: url('../graphics/lpc/png/walkcycle/BODY_skeleton.png') left center;
+    background: url('../graphics/lpc/png/walkcycle/WEAPON_shield_cutout_body.png') left center,
+    url('../graphics/lpc/png/walkcycle/BODY_skeleton.png') left center;
 }
 
 .human.stand {
