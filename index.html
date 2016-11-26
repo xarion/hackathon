@@ -10,11 +10,19 @@
 </head>
 <body>
 <div class="container">
-    <div class="bow animate_left col-lg-3"></div>
+    <div id="player" class="slash col-lg-3"></div>
 
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
-
+<script>
+    $(document).ready(function () {
+        $("#player").on("webkitAnimationEnd oanimationend msAnimationEnd animationend",
+            function () {
+                $(this).removeClass("bow").removeClass("left").removeClass("hurt").removeClass("slash").addClass("stand");
+            }
+        );
+    });
+</script>
 </body>
 </html>

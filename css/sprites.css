@@ -17,48 +17,123 @@ body {
 }
 
 
+.slash {
+    height: 64px;
+    width: 64px;
+    margin: 0;
+    background: url('../graphics/lpc/png/slash/HEAD_leather_armor_hat.png') left center,
+    url('../graphics/lpc/png/slash/BELT_leather.png') left center,
+    url('../graphics/lpc/png/slash/FEET_shoes_brown.png') left center,
+    url('../graphics/lpc/png/slash/LEGS_pants_greenish.png') left center,
+    url('../graphics/lpc/png/slash/TORSO_leather_armor_bracers.png') left center,
+    url('../graphics/lpc/png/slash/TORSO_leather_armor_shoulders.png') left center,
+    url('../graphics/lpc/png/slash/TORSO_leather_armor_torso.png') left center,
+    url('../graphics/lpc/png/slash/TORSO_leather_armor_shirt_white.png') left center,
+    url('../graphics/lpc/png/slash/WEAPON_dagger.png') left center,
+    url('../graphics/lpc/png/slash/BODY_human.png') left center;
+    animation: play_slash_right .4s steps(6);
+}
+
+.slash.left{
+    animation: play_slash_left .4s steps(6);
+}
 .bow {
     height: 64px;
     width: 64px;
     margin: 0;
-    background: url('../graphics/lpc/png/bow/HEAD_leather_armor_hat.png'),
-    url('../graphics/lpc/png/bow/BELT_leather.png'),
-    url('../graphics/lpc/png/bow/FEET_shoes_brown.png'),
-    url('../graphics/lpc/png/bow/LEGS_pants_greenish.png'),
-    url('../graphics/lpc/png/bow/TORSO_leather_armor_bracers.png'),
-    url('../graphics/lpc/png/bow/TORSO_leather_armor_shoulders.png'),
-    url('../graphics/lpc/png/bow/TORSO_leather_armor_torso.png'),
-    url('../graphics/lpc/png/bow/TORSO_leather_armor_shirt_white.png'),
-    url('../graphics/lpc/png/bow/WEAPON_arrow.png'),
-    url('../graphics/lpc/png/bow/WEAPON_bow.png'),
-    url('../graphics/lpc/png/bow/BODY_animation.png');
-
+    background: url('../graphics/lpc/png/bow/HEAD_leather_armor_hat.png') left center,
+    url('../graphics/lpc/png/bow/BELT_leather.png') left center,
+    url('../graphics/lpc/png/bow/FEET_shoes_brown.png') left center,
+    url('../graphics/lpc/png/bow/LEGS_pants_greenish.png') left center,
+    url('../graphics/lpc/png/bow/TORSO_leather_armor_bracers.png') left center,
+    url('../graphics/lpc/png/bow/TORSO_leather_armor_shoulders.png') left center,
+    url('../graphics/lpc/png/bow/TORSO_leather_armor_torso.png') left center,
+    url('../graphics/lpc/png/bow/TORSO_leather_armor_shirt_white.png') left center,
+    url('../graphics/lpc/png/bow/WEAPON_bow.png') left center,
+    url('../graphics/lpc/png/bow/WEAPON_arrow.png') left center,
+    url('../graphics/lpc/png/bow/BODY_animation.png') left center;
+    animation: play_bow_right 1s steps(13);
 }
 
 
-
-.animate_right{
-    animation: play_lpc_right .8s steps(13);
+.stand {
+    height: 64px;
+    width: 64px;
+    margin: 0;
+    background: url('../graphics/lpc/png/walkcycle/HEAD_leather_armor_hat.png') left center,
+    url('../graphics/lpc/png/walkcycle/BELT_leather.png') left center,
+    url('../graphics/lpc/png/walkcycle/FEET_shoes_brown.png') left center,
+    url('../graphics/lpc/png/walkcycle/LEGS_pants_greenish.png') left center,
+    url('../graphics/lpc/png/walkcycle/TORSO_leather_armor_bracers.png') left center,
+    url('../graphics/lpc/png/walkcycle/TORSO_leather_armor_shoulders.png') left center,
+    url('../graphics/lpc/png/walkcycle/TORSO_leather_armor_torso.png') left center,
+    url('../graphics/lpc/png/walkcycle/TORSO_leather_armor_shirt_white.png') left center,
+    url('../graphics/lpc/png/walkcycle/BODY_male.png') left center;
+    background-position: 0px 64px;
 }
 
-@keyframes play_lpc_right {
+.hurt {
+    height: 64px;
+    width: 64px;
+    margin: 0;
+    background: url('../graphics/lpc/png/hurt/HEAD_leather_armor_hat.png') left center,
+    url('../graphics/lpc/png/hurt/BELT_leather.png') left center,
+    url('../graphics/lpc/png/hurt/FEET_shoes_brown.png') left center,
+    url('../graphics/lpc/png/hurt/LEGS_pants_greenish.png') left center,
+    url('../graphics/lpc/png/hurt/TORSO_leather_armor_bracers.png') left center,
+    url('../graphics/lpc/png/hurt/TORSO_leather_armor_shoulders.png') left center,
+    url('../graphics/lpc/png/hurt/TORSO_leather_armor_torso.png') left center,
+    url('../graphics/lpc/png/hurt/TORSO_leather_armor_shirt_white.png') left center,
+    url('../graphics/lpc/png/hurt/BODY_male.png') left center;
+    animation: play_hurt .8s steps(6);
+}
+
+
+@keyframes play_hurt {
     from {
-        background-position: -832px 64px;
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 384px 0px;
+    }
+}
+
+@keyframes play_bow_right {
+    from {
+        background-position: 832px 64px;
     }
     to {
         background-position: 0px 64px;
     }
 }
 
-.animate_left{
-    animation: play_lpc_left .8s steps(13);
-}
-
-@keyframes play_lpc_left {
+@keyframes play_slash_left {
     from {
-        background-position: -832px 192px;
+        background-position: 384px 192px;
     }
     to {
         background-position: 0px 192px;
+    }
+}
+
+@keyframes play_slash_right {
+    from {
+        background-position: 384px 64px;
+    }
+    to {
+        background-position: 0px 64px;
+    }
+}
+
+.bow.left{
+    animation: play_bow_left .8s steps(13);
+}
+
+@keyframes play_bow_left {
+    from {
+        background-position: 0px 192px;
+    }
+    to {
+        background-position: 832px 192px;
     }
 }
