@@ -2,7 +2,6 @@ body {
     background: #24aecd;
 }
 
-
 .portrait {
     margin: 0 auto;
     height: 64px;
@@ -59,7 +58,9 @@ body {
 }
 
 .skeleton.bow {
-    /*Sadly Skeleton's can't use bows*/
+    background: url('../graphics/lpc/png/bow/WEAPON_bow.png') left center,
+    url('../graphics/lpc/png/bow/WEAPON_arrow.png') left center,
+    url('../graphics/lpc/png/bow/BODY_skeleton.png') left center;
 }
 
 .human.bow {
