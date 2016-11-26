@@ -2,25 +2,18 @@ body {
     background: #24aecd;
 }
 
-.monster {
-    width: 190px;
-    height: 240px;
-    margin: 2% auto;
-    background: url('../graphics/monster.png') left center;
-    animation: play_monster .8s steps(10) infinite;
-}
-
-@keyframes play_monster {
-    100% {
-        background-position: -1900px;
-    }
-}
-
-
-.slash {
+.portrait {
     height: 64px;
     width: 64px;
     margin: 0;
+}
+
+.skeleton.slash {
+    background: url('../graphics/lpc/png/slash/BODY_skeleton.png') left center,
+    url('../graphics/lpc/png/slash/WEAPON_dagger.png') left center;
+}
+
+.human.slash {
     background: url('../graphics/lpc/png/slash/HEAD_leather_armor_hat.png') left center,
     url('../graphics/lpc/png/slash/BELT_leather.png') left center,
     url('../graphics/lpc/png/slash/FEET_shoes_brown.png') left center,
@@ -31,16 +24,21 @@ body {
     url('../graphics/lpc/png/slash/TORSO_leather_armor_shirt_white.png') left center,
     url('../graphics/lpc/png/slash/WEAPON_dagger.png') left center,
     url('../graphics/lpc/png/slash/BODY_human.png') left center;
+}
+
+.slash.right {
     animation: play_slash_right .4s steps(6);
 }
 
-.slash.left{
+.slash.left {
     animation: play_slash_left .4s steps(6);
 }
-.bow {
-    height: 64px;
-    width: 64px;
-    margin: 0;
+
+.skeleton.bow {
+    /*Sadly Skeleton's can't use bows*/
+}
+
+.human.bow {
     background: url('../graphics/lpc/png/bow/HEAD_leather_armor_hat.png') left center,
     url('../graphics/lpc/png/bow/BELT_leather.png') left center,
     url('../graphics/lpc/png/bow/FEET_shoes_brown.png') left center,
@@ -52,14 +50,21 @@ body {
     url('../graphics/lpc/png/bow/WEAPON_bow.png') left center,
     url('../graphics/lpc/png/bow/WEAPON_arrow.png') left center,
     url('../graphics/lpc/png/bow/BODY_animation.png') left center;
-    animation: play_bow_right 1s steps(13);
 }
 
+.bow.left {
+    animation: play_bow_left .8s steps(13);
+}
 
-.stand {
-    height: 64px;
-    width: 64px;
-    margin: 0;
+.bow.right {
+    animation: play_bow_right .8s steps(13);
+}
+
+.skeleton.stand {
+    background: url('../graphics/lpc/png/walkcycle/BODY_skeleton.png') left center;
+}
+
+.human.stand {
     background: url('../graphics/lpc/png/walkcycle/HEAD_leather_armor_hat.png') left center,
     url('../graphics/lpc/png/walkcycle/BELT_leather.png') left center,
     url('../graphics/lpc/png/walkcycle/FEET_shoes_brown.png') left center,
@@ -69,13 +74,22 @@ body {
     url('../graphics/lpc/png/walkcycle/TORSO_leather_armor_torso.png') left center,
     url('../graphics/lpc/png/walkcycle/TORSO_leather_armor_shirt_white.png') left center,
     url('../graphics/lpc/png/walkcycle/BODY_male.png') left center;
+}
+
+.stand.left {
+    background-position: 0px 192px;
+}
+
+.stand.right {
     background-position: 0px 64px;
 }
 
-.hurt {
-    height: 64px;
-    width: 64px;
-    margin: 0;
+.skeleton.hurt {
+    background: url('../graphics/lpc/png/hurt/BODY_skeleton.png') left center;;
+    animation: play_hurt .8s steps(6);
+}
+
+.human.hurt {
     background: url('../graphics/lpc/png/hurt/HEAD_leather_armor_hat.png') left center,
     url('../graphics/lpc/png/hurt/BELT_leather.png') left center,
     url('../graphics/lpc/png/hurt/FEET_shoes_brown.png') left center,
@@ -87,7 +101,6 @@ body {
     url('../graphics/lpc/png/hurt/BODY_male.png') left center;
     animation: play_hurt .8s steps(6);
 }
-
 
 @keyframes play_hurt {
     from {
@@ -123,10 +136,6 @@ body {
     to {
         background-position: 0px 64px;
     }
-}
-
-.bow.left{
-    animation: play_bow_left .8s steps(13);
 }
 
 @keyframes play_bow_left {
