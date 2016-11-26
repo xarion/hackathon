@@ -1,4 +1,5 @@
 var slash_audio = new Audio('audio/battle/sword-unsheathe.wav');
+var bow_audio = new Audio('audio/battle/swing3.wav');
 var giant_hurt_audio = new Audio('audio/NPC/giant/giant3.wav');
 
 function slash(player) {
@@ -12,7 +13,10 @@ function slash(player) {
 
 function bow(player) {
     $(player).removeClass("stand").addClass("bow");
-    deal_damage(player, 10);
+    setTimeout(function () {
+        bow_audio.play();
+        deal_damage(player, 10);
+    }, 600);
 }
 
 function hurt(player) {
