@@ -1,16 +1,64 @@
 body {
-  background: #24aecd;
+    background: #24aecd;
 }
 
 .monster {
-  width: 190px;
-  height: 240px;
-  margin: 2% auto;
-  background: url('http://treehouse-code-samples.s3.amazonaws.com/CSS-DD/codepen/blog/monster.png') left center;
-  animation: play .8s steps(10) infinite;
+    width: 190px;
+    height: 240px;
+    margin: 2% auto;
+    background: url('../graphics/monster.png') left center;
+    animation: play_monster .8s steps(10) infinite;
 }
 
-@keyframes play {
-    100% { background-position: -1900px; }
+@keyframes play_monster {
+    100% {
+        background-position: -1900px;
+    }
 }
 
+
+.bow {
+    height: 64px;
+    width: 64px;
+    margin: 0;
+    background: url('../graphics/lpc/png/bow/HEAD_leather_armor_hat.png'),
+    url('../graphics/lpc/png/bow/BELT_leather.png'),
+    url('../graphics/lpc/png/bow/FEET_shoes_brown.png'),
+    url('../graphics/lpc/png/bow/LEGS_pants_greenish.png'),
+    url('../graphics/lpc/png/bow/TORSO_leather_armor_bracers.png'),
+    url('../graphics/lpc/png/bow/TORSO_leather_armor_shoulders.png'),
+    url('../graphics/lpc/png/bow/TORSO_leather_armor_torso.png'),
+    url('../graphics/lpc/png/bow/TORSO_leather_armor_shirt_white.png'),
+    url('../graphics/lpc/png/bow/WEAPON_arrow.png'),
+    url('../graphics/lpc/png/bow/WEAPON_bow.png'),
+    url('../graphics/lpc/png/bow/BODY_animation.png');
+
+}
+
+
+
+.animate_right{
+    animation: play_lpc_right .8s steps(13);
+}
+
+@keyframes play_lpc_right {
+    from {
+        background-position: -832px 64px;
+    }
+    to {
+        background-position: 0px 64px;
+    }
+}
+
+.animate_left{
+    animation: play_lpc_left .8s steps(13);
+}
+
+@keyframes play_lpc_left {
+    from {
+        background-position: -832px 192px;
+    }
+    to {
+        background-position: 0px 192px;
+    }
+}
