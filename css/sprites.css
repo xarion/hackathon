@@ -2,11 +2,31 @@ body {
     background: #24aecd;
 }
 
-
 .portrait {
     height: 64px;
     width: 64px;
     margin: 0;
+
+}
+
+.row.fighters {
+    margin-top: 20px;
+}
+
+.largex2 {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+}
+
+.largex15 {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 .skeleton.slash {
