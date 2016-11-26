@@ -6,11 +6,11 @@ body {
     height: 64px;
     width: 64px;
     margin: 0;
-
 }
 
-.row.fighters {
-    margin-top: 20px;
+.health {
+    width: 64px;
+    height: 5px;
 }
 
 .largex2 {
