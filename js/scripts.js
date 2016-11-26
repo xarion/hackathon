@@ -1,23 +1,30 @@
 var slash_audio = new Audio('audio/battle/sword-unsheathe.wav');
+var giant_hurt_audio = new Audio('audio/NPC/giant/giant3.wav');
 
 function slash(player) {
     $(player).removeClass("stand").addClass("slash");
     setTimeout(function () {
         slash_audio.play();
+        deal_damage(player, 10);
     }, 100);
-    deal_damage(player, 10);
+
 }
 
 function bow(player) {
     $(player).removeClass("stand").addClass("bow");
+    deal_damage(player, 10);
 }
 
 function hurt(player) {
     $(player).removeClass("stand").addClass("hurt");
+    if ($(player).hasClass("skeleton")) {
+        giant_hurt_audio.play();
+    }
 }
 
 function deal_damage(player, damage) {
-    var targetHealthBar = $($(player).data("target")).siblings(".health");
+    var targetPlayer = $($(player).data("target"));
+    var targetHealthBar = targetPlayer.siblings(".health");
     var targetHealth = targetHealthBar.attr("aria-valuenow");
     targetHealth -= damage;
     if (targetHealth < 0) {
@@ -25,6 +32,7 @@ function deal_damage(player, damage) {
     }
     targetHealthBar.attr("aria-valuenow", targetHealth);
     targetHealthBar.css("width", targetHealth + "%");
+    hurt(targetPlayer);
 }
 
 $(document).ready(function () {
