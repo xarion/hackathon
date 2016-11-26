@@ -2,13 +2,15 @@ body {
     background: #24aecd;
 }
 
+
 .portrait {
+    margin: 0 auto;
     height: 64px;
     width: 64px;
-    margin: 0;
 }
 
 .health {
+    margin: 0 auto;
     width: 64px;
     height: 5px;
 }
