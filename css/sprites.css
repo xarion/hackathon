@@ -2,6 +2,56 @@ body {
     background: #24aecd;
 }
 
+.stimuli-container {
+    margin-bottom: -20px;
+}
+
+.action-button{
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.action-button.weapon{
+    float: left;
+    background: url("../graphics/fantasy_icons/myweaponicon.gif");
+    background-size: 40px 40px;
+    background-color: black;
+}
+
+.action-button.potion{
+    float: right;
+    background: url("../graphics/fantasy_icons/bonus2-parchmentborder.gif");
+    background-size: 40px 40px;
+    background-color: black;
+}
+
+.action-bar {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.action-button span{
+    float: left;
+    margin-top: 2px;
+    margin-left: 6px;
+    font-size: 10px;
+    color: whitesmoke;
+}
+
+.stimuli {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    background: url("../graphics/fantasy_icons/00-panel.gif");
+}
+
+.stimuli img {
+    width: 50px;
+    height: 50px;
+}
+
 .portrait {
     margin: 0 auto;
     height: 64px;
@@ -30,6 +80,13 @@ body {
     transform: scale(1.5);
 }
 
+.skeleton.boss.slash {
+    background: url('../graphics/lpc/png/slash/WEAPON_shield_cutout_body.png') left center,
+    url('../graphics/lpc/png/slash/HEAD_plate_armor_helmet.png') left center,
+    url('../graphics/lpc/png/slash/BODY_skeleton.png') left center,
+    url('../graphics/lpc/png/slash/WEAPON_dagger.png') left center;
+}
+
 .skeleton.slash {
     background: url('../graphics/lpc/png/slash/WEAPON_shield_cutout_body.png') left center,
     url('../graphics/lpc/png/slash/BODY_skeleton.png') left center,
@@ -55,6 +112,13 @@ body {
 
 .slash.left {
     animation: play_slash_left .4s steps(6);
+}
+
+.skeleton.boss.bow {
+    background: url('../graphics/lpc/png/bow/WEAPON_bow.png') left center,
+    url('../graphics/lpc/png/bow/HEAD_plate_armor_helmet.png') left center,
+    url('../graphics/lpc/png/bow/WEAPON_arrow.png') left center,
+    url('../graphics/lpc/png/bow/BODY_skeleton.png') left center;
 }
 
 .skeleton.bow {
@@ -85,6 +149,12 @@ body {
     animation: play_bow_right .8s steps(13);
 }
 
+.skeleton.boss.stand {
+    background: url('../graphics/lpc/png/walkcycle/WEAPON_shield_cutout_body.png') left center,
+    url('../graphics/lpc/png/walkcycle/HEAD_plate_armor_helmet.png') left center,
+    url('../graphics/lpc/png/walkcycle/BODY_skeleton.png') left center;
+}
+
 .skeleton.stand {
     background: url('../graphics/lpc/png/walkcycle/WEAPON_shield_cutout_body.png') left center,
     url('../graphics/lpc/png/walkcycle/BODY_skeleton.png') left center;
@@ -110,6 +180,12 @@ body {
     background-position: 0px 64px;
 }
 
+.boss.skeleton.hurt {
+    background: url('../graphics/lpc/png/hurt/HEAD_plate_armor_helmet.png') left center,
+    url('../graphics/lpc/png/hurt/BODY_skeleton.png') left center;
+    animation: play_hurt .8s steps(6);
+}
+
 .skeleton.hurt {
     background: url('../graphics/lpc/png/hurt/BODY_skeleton.png') left center;;
     animation: play_hurt .8s steps(6);
@@ -127,6 +203,44 @@ body {
     url('../graphics/lpc/png/hurt/BODY_male.png') left center;
     animation: play_hurt .8s steps(6);
 }
+
+.human.heal {
+    background: url('../graphics/lpc/png/spellcast/HEAD_leather_armor_hat.png') left center,
+    url('../graphics/lpc/png/spellcast/BELT_leather.png') left center,
+    url('../graphics/lpc/png/spellcast/FEET_shoes_brown.png') left center,
+    url('../graphics/lpc/png/spellcast/LEGS_pants_greenish.png') left center,
+    url('../graphics/lpc/png/spellcast/TORSO_leather_armor_bracers.png') left center,
+    url('../graphics/lpc/png/spellcast/TORSO_leather_armor_shoulders.png') left center,
+    url('../graphics/lpc/png/spellcast/TORSO_leather_armor_torso.png') left center,
+    url('../graphics/lpc/png/spellcast/TORSO_leather_armor_shirt_white.png') left center,
+    url('../graphics/lpc/png/spellcast/BODY_male.png') left center;
+}
+
+.heal.right {
+    animation: play_heal_right 1s steps(7);
+}
+.heal.left {
+    animation: play_heal_left 1s steps(7);
+}
+
+@keyframes play_heal_left {
+    from {
+        background-position: 448px 192px;
+    }
+    to {
+        background-position: 0px 192px;
+    }
+}
+
+@keyframes play_heal_right {
+    from {
+        background-position: 448px 64px;
+    }
+    to {
+        background-position: 0px 64px;
+    }
+}
+
 
 @keyframes play_hurt {
     from {
@@ -172,3 +286,5 @@ body {
         background-position: 0px 192px;
     }
 }
+
+
