@@ -1,26 +1,43 @@
 body {
-    background: #24aecd;
+    /*background: #24aecd;*/
+    background: black;
+}
+
+#home-page {
+    background: url("../graphics/new_town_cove_bg.jpeg") no-repeat center center fixed;
+    margin: 0 auto;
+}
+
+.play-button-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+#game-page {
+    display: none;
 }
 
 .stimuli-container {
+    height: 50px;
     margin-bottom: -20px;
 }
 
-.action-button{
+.action-button {
     margin: 0;
     width: 40px;
     height: 40px;
     display: inline-block;
 }
 
-.action-button.weapon{
+.action-button.weapon {
     float: left;
     background: url("../graphics/fantasy_icons/myweaponicon.gif");
     background-size: 40px 40px;
     background-color: black;
 }
 
-.action-button.potion{
+.action-button.potion {
     float: right;
     background: url("../graphics/fantasy_icons/bonus2-parchmentborder.gif");
     background-size: 40px 40px;
@@ -30,9 +47,10 @@ body {
 .action-bar {
     text-align: center;
     margin-top: 5px;
+    display: none;
 }
 
-.action-button span{
+.action-button span {
     float: left;
     margin-top: 2px;
     margin-left: 6px;
@@ -56,12 +74,14 @@ body {
     margin: 0 auto;
     height: 64px;
     width: 64px;
+    display: none;
 }
 
 .health {
     margin: 0 auto;
     width: 64px;
     height: 5px;
+    display: none;
 }
 
 .largex2 {
@@ -180,6 +200,29 @@ body {
     background-position: 0px 64px;
 }
 
+.stand.walk{
+    animation: walk_right 4s steps(13);
+    animation-fill-mode: forwards;
+}
+
+@keyframes walk_right {
+    0% {
+        margin-left: 0%;
+        background-position: 832px 64px;
+    }
+    33% {
+        margin-left: 33%;
+        background-position: 0px 64px;
+    }
+    66% {
+        margin-left: 66%;
+        background-position: 832px 64px;
+    }
+    100% {
+        margin-left: 100%;
+        background-position: 0px 64px;
+    }
+}
 .boss.skeleton.hurt {
     background: url('../graphics/lpc/png/hurt/HEAD_plate_armor_helmet.png') left center,
     url('../graphics/lpc/png/hurt/BODY_skeleton.png') left center;
@@ -219,6 +262,7 @@ body {
 .heal.right {
     animation: play_heal_right 1s steps(7);
 }
+
 .heal.left {
     animation: play_heal_left 1s steps(7);
 }
@@ -240,7 +284,6 @@ body {
         background-position: 0px 64px;
     }
 }
-
 
 @keyframes play_hurt {
     from {
@@ -287,4 +330,31 @@ body {
     }
 }
 
+.human.dead {
+    background: url('../graphics/lpc/png/hurt/HEAD_leather_armor_hat.png') left center,
+    url('../graphics/lpc/png/hurt/BELT_leather.png') left center,
+    url('../graphics/lpc/png/hurt/FEET_shoes_brown.png') left center,
+    url('../graphics/lpc/png/hurt/LEGS_pants_greenish.png') left center,
+    url('../graphics/lpc/png/hurt/TORSO_leather_armor_bracers.png') left center,
+    url('../graphics/lpc/png/hurt/TORSO_leather_armor_shoulders.png') left center,
+    url('../graphics/lpc/png/hurt/TORSO_leather_armor_torso.png') left center,
+    url('../graphics/lpc/png/hurt/TORSO_leather_armor_shirt_white.png') left center,
+    url('../graphics/lpc/png/hurt/BODY_male.png') left center;
+    animation: play_dead .8s steps(5);
+    animation-fill-mode: forwards;
+}
 
+.skeleton.dead {
+    background: url('../graphics/lpc/png/hurt/BODY_skeleton.png');
+    animation: play_dead .8s steps(5);
+    animation-fill-mode: forwards;
+}
+
+@keyframes play_dead {
+    from {
+        background-position: 384px 0px;
+    }
+    to {
+        background-position: 64px 0px;
+    }
+}
